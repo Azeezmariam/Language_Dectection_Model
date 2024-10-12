@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project involves the development of a machine learning model for language detection. The model focuses on detecting four languages: English, French, Kinyarwanda, and Kiswahili. The project is designed to help improve language classification accuracy, especially for the African region.
+This project involves the development of a machine-learning model for language detection. The model focuses on detecting four languages: English, French, Kinyarwanda, and Kiswahili. The project is designed to help improve language classification accuracy, especially for the African region.
 
 ## Project Objectives
 
@@ -35,10 +35,7 @@ The model performed exceptionally well, particularly in distinguishing French an
 ## Evaluation Metrics
 
 - **Precision**: The model achieved high precision across all languages.
-- **Recall**: The recall scores were similarly high, indicating that the model correctly identified most true positives.
-- **F1-Score**: The F1-scores reflected a balance between precision and recall.
-- **Specificity**: This metric helped measure the model's ability to correctly identify negatives.
+- **Recall**: The recall scores were similarly high, indicating that the model correctly identified the most true positives.
+- **F1-Score**: The F1-scores balanced precision and recall.
+- **Specificity**: This metric helped measure the model's ability to identify negatives correctly.
 
----
-
-You can modify or expand upon this draft to better reflect any additional aspects of your project.
