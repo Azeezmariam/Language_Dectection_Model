@@ -152,3 +152,76 @@ The model performed exceptionally well, particularly in distinguishing French an
 - **F1-Score**: The F1-scores balanced precision and recall.
 - **Specificity**: This metric helped measure the model's ability to identify negatives correctly.
 
+  ### Instructions for Running the Notebook and Loading the Saved Models
+
+To run the notebook and load the saved models, follow these steps:
+
+#### 1. **Set Up the Environment**
+Ensure that your environment has the necessary dependencies installed. You can do this by running the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+Alternatively, manually install key dependencies:
+
+```bash
+pip install numpy pandas scikit-learn tensorflow matplotlib
+```
+
+#### 2. **Open the Notebook**
+1. Open the Jupyter notebook in your preferred environment (Jupyter Lab, Jupyter Notebook, or any compatible IDE like VSCode).
+
+   ```bash
+   jupyter notebook Language_Detection_Model.ipynb
+   ```
+
+2. Navigate to the notebook and ensure that it opens without any issues.
+
+#### 3. **Load the Dataset**
+Make sure you have the dataset available. If the dataset is included in the repository or specified in the notebook, the relevant cells should load and prepare the data automatically. The dataset will be split into training and testing sets.
+
+#### 4. **Train and Evaluate the Model**
+The notebook provides cells for training different models with various combinations of optimization techniques. To run these, execute the cells sequentially by pressing **Shift + Enter** or selecting **Run All** from the toolbar.
+
+The training process may take some time depending on your hardware, but intermediate results such as accuracy and loss values will be displayed as each model is evaluated.
+
+#### 5. **Loading Saved Models**
+Pre-trained models are saved in the repository and can be loaded directly without retraining. To load the saved models, ensure the following code is included in the appropriate cell:
+
+```python
+import tensorflow as tf
+
+# Load the final model (Combination 1)
+final_model = tf.keras.models.load_model('saved_models/final_model_combination1.h5')
+
+# Example usage: make predictions with the loaded model
+predictions = final_model.predict(test_data)
+```
+
+You can replace `'saved_models/final_model_combination1.h5'` with the path to any other saved models if needed (e.g., combination2, combination3, etc.).
+
+#### 6. **Run Predictions and Evaluation**
+Once the model is loaded, you can proceed to evaluate its performance or make predictions. The evaluation cells in the notebook provide metrics like **accuracy**, **loss**, **confusion matrix**, **F1 score**, and more.
+
+```python
+# Evaluate the loaded model
+evaluation = final_model.evaluate(test_data, test_labels)
+print(f"Test Accuracy: {evaluation[1]}")
+```
+
+#### 7. **Modify or Retrain Models**
+If you wish to modify or retrain any model using different hyperparameters, the notebook allows you to adjust settings for regularization, optimizers, dropout, and learning rate. Simply modify the corresponding cells and re-run the training process.
+
+#### 8. **Saving Models**
+After training, you can save your models as follows:
+
+```python
+# Save the model after training
+model.save('saved_models/my_trained_model.h5')
+```
+
+---
+
+By following these instructions, you can seamlessly run the notebook, load the saved models, and evaluate or modify the language detection model.
+
