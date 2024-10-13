@@ -152,7 +152,8 @@ The model performed exceptionally well, particularly in distinguishing French an
 - **F1-Score**: The F1-scores balanced precision and recall.
 - **Specificity**: This metric helped measure the model's ability to identify negatives correctly.
 
-  ### Instructions for Running the Notebook and Loading the Saved Models
+
+### Instructions for Running the Notebook and Loading the Saved Models
 
 To run the notebook and load the saved models, follow these steps:
 
